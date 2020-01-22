@@ -2,7 +2,11 @@ console.log("JavaScript is linked");
 
 function init(){
     sayHello();
-	defTitre3();
+    //defTitre1();
+	//defTitre2();
+	//defTitre3();    
+	defTitre4();
+
 }
 
 function defTitre1() {
@@ -26,6 +30,22 @@ function defTitre3() {
         document.title = lastH2[lastH2.length-1].innerText;
         console.log("<title> set : Ok Everypony !");
 
+    } else {
+        document.title = "Page par Pauline Célestiale";
+        console.warn("There is no H2 tag on this page Everypony ! /:")
+    }
+}
+
+function defTitre4() {
+    var choosenH = document.getElementsByClassName("firstOrLast");
+    if(choosenH != null) {
+        if(choosenH.length%2 == 0) {
+            document.title =choosenH[0].innerText;
+            console.log("<title> set first H : Ok Everypony !");
+        } else {
+            document.title =choosenH[choosenH.length-1].innerText;
+            console.log("<title> set last H : Ok Everypony !");
+        }
     } else {
         document.title = "Page par Pauline Célestiale";
         console.warn("There is no H2 tag on this page Everypony ! /:")
