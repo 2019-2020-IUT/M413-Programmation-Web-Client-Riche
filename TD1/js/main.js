@@ -58,13 +58,16 @@ function defTitre4() {
 
 function invertText() {
     var buffer;
-    var pTags = document.getElementsByTagName("p");
+    var un = document.getElementById("1");
+    var deux = document.getElementById("2");
 
-    console.log(pTags);
+    console.log(buffer);
+    console.log(un);
+    console.log(deux);
 
-    buffer = pTags[pTags.length-2].innertext;
-    pTags[pTags.length-2] = pTags[pTags.length-1].innertext;
-    pTags[pTags.length-1] = buffer;
+    buffer = un.innerText;
+    un.innerText = deux.innerText;
+    deux.innerText = buffer;
 
 }
 
