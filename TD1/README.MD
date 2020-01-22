@@ -19,3 +19,7 @@ J'ai utilisé le ``innerText`` de l'objet.
 > Quelle(s) méthode(s) avez-vous utilisée pour récupérer l’objet représentant votre balise h2 ?
 
 J'ai utilisé ``document.getElementsByTagName`` que j'ai affecté à une variable nommée ``firstH2``. Puis je l'ai utilisée avec son attribut ``innerText``.
+
+> Comment faire pour connaitre le nombre de balise h2 du document ?
+
+On utilise la propriété ``.lenght`` pour connaitre le nombre de balises h2 du document.
