@@ -1,6 +1,6 @@
 # Exercice 1
 
-## defTitre1
+## defTitre1()
 
 > Quel sera l’évènement qui déclenchera l’appelle de votre fonction ?
 
@@ -14,19 +14,19 @@ J'ai utilisé la méthode ``document.getElementById()`` pour récupérer le titr
 
 J'ai utilisé le ``innerText`` de l'objet.
 
-## defTitre2
+## defTitre2()
 
 > Quelle(s) méthode(s) avez-vous utilisée pour récupérer l’objet représentant votre balise h2 ?
 
 J'ai utilisé ``document.getElementsByTagName`` que j'ai affecté à une variable nommée ``firstH2``. Puis je l'ai utilisée avec son attribut ``innerText``.
 
-## defTitre3
+## defTitre3()
 
 > Comment faire pour connaitre le nombre de balise h2 du document ?
 
 On utilise la propriété ``.lenght`` pour connaitre le nombre de balises h2 du document.
 
-## defTitre4
+## defTitre4()
 
 > Quelle méthode avez-vous utilisée pour récupérer l’objet de votre classe ?
 
@@ -40,7 +40,9 @@ La page ne s'affiche pas
 
 Avec un modulo 2.
 
+## invertText()
 
+``InnerHTML`` conserve les balises "pures" du HTML alors que ``InnerText`` ne garde que le texte.
 
 
 

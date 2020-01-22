@@ -5,8 +5,12 @@ function init(){
     //defTitre1();
 	//defTitre2();
 	//defTitre3();    
-	defTitre4();
+    defTitre4();
 
+}
+
+function sayHello() {
+    console.log("Hello Everypony !");
 }
 
 function defTitre1() {
@@ -52,6 +56,15 @@ function defTitre4() {
     }
 }
 
-function sayHello() {
-    console.log("Hello Everypony !");
+function invertText() {
+    var buffer;
+    var pTags = document.getElementsByTagName("p");
+
+    console.log(pTags);
+
+    buffer = pTags[pTags.length-2].innertext;
+    pTags[pTags.length-2] = pTags[pTags.length-1].innertext;
+    pTags[pTags.length-1] = buffer;
+
 }
+
