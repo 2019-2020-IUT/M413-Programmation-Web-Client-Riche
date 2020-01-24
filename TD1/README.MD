@@ -1,6 +1,8 @@
 # Exercice 1
 
-## defTitre1()
+## La propriété document.title
+
+### defTitre1()
 
 > Quel sera l’évènement qui déclenchera l’appelle de votre fonction ?
 
@@ -14,19 +16,19 @@ J'ai utilisé la méthode ``document.getElementById()`` pour récupérer le titr
 
 J'ai utilisé le ``innerText`` de l'objet.
 
-## defTitre2()
+### defTitre2()
 
 > Quelle(s) méthode(s) avez-vous utilisée pour récupérer l’objet représentant votre balise h2 ?
 
 J'ai utilisé ``document.getElementsByTagName`` que j'ai affecté à une variable nommée ``firstH2``. Puis je l'ai utilisée avec son attribut ``innerText``.
 
-## defTitre3()
+### defTitre3()
 
 > Comment faire pour connaitre le nombre de balise h2 du document ?
 
 On utilise la propriété ``.lenght`` pour connaitre le nombre de balises h2 du document.
 
-## defTitre4()
+### defTitre4()
 
 > Quelle méthode avez-vous utilisée pour récupérer l’objet de votre classe ?
 
@@ -40,9 +42,20 @@ La page ne s'affiche pas
 
 Avec un modulo 2.
 
-## invertText()
+## Les propriétés innerHTML, innerText, outerHTML, outerText et textContent
+
+### invertText()
+
+> Quelles différences existe-t-il entre les 5 propriétés de cette section ?
 
 ``InnerHTML`` conserve les balises "pures" du HTML alors que ``InnerText`` ne garde que le texte.
+
+> Y a-t-il une différence avec Internet Explore, FireFox et d’autres navigateurs à votre disposition concernant ces
+propriétés ?
+
+Oui, chaque navigateur a sa propre méthode de rendu.
+
+## La propriété document.lastModified
 
 
 
