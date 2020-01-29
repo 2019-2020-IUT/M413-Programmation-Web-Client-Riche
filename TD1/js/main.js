@@ -1,4 +1,4 @@
-console.log("JavaScript is linked");
+console.log("JavaScript is linked"); /**Cette méthode permet de vérifier que Javascript est bien activé **/
 
 
 
@@ -11,17 +11,17 @@ function init() {
 
 }
 
-function sayHello() {
+function sayHello() { /**Cette méthode permet de vérifier que la console de log est activée. **/
     console.log("Hello Everypony !");
 }
 
-function defTitre1() {
+function defTitre1() { /**Cette méthode permet de forcer letitre de la page avec le contenu de la balise dont l'id est titre **/
     if (document.title = document.getElementById("titre").innerText) {
         console.log("<title> set : Ok Everypony !");
     }
 }
 
-function defTitre2() {
+function defTitre2() { /**Cette méthode permet de forcer letitre de la page avec le contenu de la première balise H2 **/
     var firstH2 = document.getElementsByTagName("h2");
     if (firstH2 != null) {
         document.title = firstH2[0].innerText;
@@ -30,7 +30,7 @@ function defTitre2() {
     }
 }
 
-function defTitre3() {
+function defTitre3() { /**Cette méthode permet de forcer letitre de la page avec le contenu de la dernière balise H2 ou avec le nom de l'auteur si il n'y a pas de balises H2**/
     var lastH2 = document.getElementsByTagName("h2");
     if (lastH2 != null) {
         document.title = lastH2[lastH2.length - 1].innerText;
@@ -42,7 +42,7 @@ function defTitre3() {
     }
 }
 
-function defTitre4() {
+function defTitre4() { /**Cette méthode permet de forcer letitre de la page avec le contenu de la dernière balise H3 si il y a un nombre impair de H3, avec la première balise H3 si il y en a un nombre pair ou avec le nom de l'auteur si il n'y a pas de balises H2**/
     var choosenH = document.getElementsByClassName("firstOrLast");
     if (choosenH != null) {
         if (choosenH.length % 2 == 0) {
@@ -58,7 +58,7 @@ function defTitre4() {
     }
 }
 
-function invertText() {
+function invertText() { /**Cette fonction inverses deux lignes entre elles **/
     var buffer;
     var un = document.getElementById("1");
     var deux = document.getElementById("2");
