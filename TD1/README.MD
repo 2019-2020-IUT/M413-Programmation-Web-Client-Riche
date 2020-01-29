@@ -61,6 +61,26 @@ Oui, chaque navigateur a sa propre méthode de rendu.
 
 J'ai mis la balise auteur en premier.
 
+J'ai fait une méthode qui utilise un switch case pour changer le mois et le jour du numéro par le texte mais j'aurai pu aussi faire un tableau et apperler une méthode ``jour[numeroJour]``.
 
+# Exercice 2 -  L'objet Date :
 
+J'avais commencé à écrire deux petites condition en if/else mais une autre solution me semble plus simple :
+
+```js
+    var now = new Date();
+    var selectedDay = new Date('2020-7-19');
+
+    var diffD = selectedDay.getDate - now.getDate;
+    var diffM = selectedDay.getMonth - now.getMonth;
+
+    if (diffM % 2 == 0) { //on regarde s'il y a un nombre pair de mois
+        diffM = (diffM * 30) + (diffM / 2);
+    } else { //si nombre impair de mois
+        diffM = ((diffM * 30) + (diffM / 2)) + 1;
+    }
+
+    if ((now.getMonth == 2) || (selectedDay.getMonth == 2)) { //la on va voir si on passe par févrirer pour faire la comparaison
+        diffM = diffM - 2; //si il y a février, on retire deux jours
+    }```
 

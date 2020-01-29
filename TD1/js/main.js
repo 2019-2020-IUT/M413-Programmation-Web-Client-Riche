@@ -86,28 +86,43 @@ function datemodif() {
         setModifSentence = setModifSentence + "Document modifié le " + laDate + " par " + lastauthor[0].content; // on botient la phrase finale
 
     }
-    div2change.innerText = setModifSentence;
-    console.log(setModifSentence); //on affiche la date au complet
+    //console.log(setModifSentence);
+    div2change.innerText = setModifSentence; //on affiche la date au complet
+}
+
+function majNbJours() {
+    var now = new Date();
+    var selectedDay = new Date('2020-7-19');
+
+    var msNow = now.getTime;
+    var msSelectedDay = selectedDay.getTime;
+    var diff = (msSelectedDay - msNow) / (24 * 1000 * 3600); //24h, 1000 ms = 1 s, 3600s = 1h
+
+    console.log(msNow);
+    console.log(msSelectedDay);
+    console.log(diff);
+
+    var text2replace = document.getElementById("deadline");
+    text2replace.innerHTML = diff;
 
 }
+
+
 
 function d2S(d) { //renvoi le nom du jour au lieu du chiffre
     switch (d) {
         case 0:
             return "dimanche";
             break;
-
         case 1:
             return "lundi";
             break;
         case 2:
             return "mardi"
-
             break;
         case 3:
             return "mercredi"
             break;
-
         case 4:
             return "jeudi"
             break;
