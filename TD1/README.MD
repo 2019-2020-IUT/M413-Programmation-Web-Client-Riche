@@ -57,9 +57,9 @@ Oui, chaque navigateur a sa propre méthode de rendu.
 
 ## La propriété document.lastModified
 
+> Comment modifier votre code pour qu’il permette de sélectionner le 1 er auteur de la liste ?
 
-
-
+J'ai mis la balise auteur en premier.
 
 
 

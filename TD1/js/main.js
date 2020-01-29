@@ -8,6 +8,7 @@ function init() {
     //defTitre2();
     //defTitre3();    
     defTitre4();
+    datemodif();
 
 }
 
@@ -60,11 +61,110 @@ function defTitre4() { /**Cette méthode permet de forcer letitre de la page ave
 
 function invertText() { /**Cette fonction inverses deux lignes entre elles **/
     var buffer;
-    var un = document.getElementById("1");
-    var deux = document.getElementById("2");
+    var un = document.getElementById("1"); //C'est la première ligne que l'on veux inverser
+    var deux = document.getElementById("2"); // C'est la deuxième ligne que l'on veut inverser
 
-    buffer = un.innerText;
-    un.innerText = deux.innerText;
-    deux.innerText = buffer;
+    buffer = un.innerText; //on garde en mémoire la ligne 1
+    un.innerText = deux.innerText; //on affecte le contenu de la ligne 2 à la ligne 1
+    deux.innerText = buffer; //on affecte le contenu de la ligne 1 à la ligne 2 via ce que l'on a stocké dans le buffer
 
+}
+
+function datemodif() {
+    var now = new Date();
+
+    var dN = now.getDay(); //dN for Day Name
+    var d = now.getDate(); //d for Day
+    var m = now.getMonth(); //m for Month
+    var y = now.getFullYear(); // y for Year
+    var laDate = d2S(dN) + " " + d + " " + m2S(m) + " " + y; //on concatène le String au complet.
+    var lastauthor = document.getElementsByTagName("meta"); //on va chercher les eta et on gardera que le dernier
+    var setModifSentence = ""; //on initialise la variable
+    var div2change = document.getElementById("date_modif"); //la balise div vide en fin de page.
+
+    if (lastauthor != null) {
+        setModifSentence = setModifSentence + "Document modifié le " + laDate + " par " + lastauthor[0].content; // on botient la phrase finale
+
+    }
+    div2change.innerText = setModifSentence;
+    console.log(setModifSentence); //on affiche la date au complet
+
+}
+
+function d2S(d) { //renvoi le nom du jour au lieu du chiffre
+    switch (d) {
+        case 0:
+            return "dimanche";
+            break;
+
+        case 1:
+            return "lundi";
+            break;
+        case 2:
+            return "mardi"
+
+            break;
+        case 3:
+            return "mercredi"
+            break;
+
+        case 4:
+            return "jeudi"
+            break;
+        case 5:
+            return "vendredi"
+            break;
+        case 6:
+            return "samedi"
+            break;
+        default:
+            break;
+    }
+}
+
+function m2S(m) { //renvoi le nom du mois au lieu du chiffre
+    switch (m) {
+        case 0:
+            return "janvier";
+            break;
+
+        case 1:
+            return "février";
+            break;
+        case 2:
+            return "mars"
+
+            break;
+        case 3:
+            return "avril"
+            break;
+
+        case 4:
+            return "mai"
+            break;
+        case 5:
+            return "juin"
+            break;
+        case 6:
+            return "juillet"
+            break;
+        case 7:
+            return "août"
+            break;
+        case 8:
+            return "septembre"
+            break;
+        case 9:
+            return "octobre"
+            break;
+        case 10:
+            return "novembre"
+            break;
+        case 11:
+            return "décembre"
+            break;
+
+        default:
+            break;
+    }
 }
