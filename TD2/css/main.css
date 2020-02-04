@@ -14,7 +14,7 @@ h1 {
     margin-left: 10px;
 }
 
-.h {
+h2 {
     background-color: #abc;
     padding: 10px;
     margin-left: 60px;
@@ -39,4 +39,11 @@ p {
 
 .pink {
     background-color: pink;
+}
+
+#imgMelou,
+#butMelou {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
