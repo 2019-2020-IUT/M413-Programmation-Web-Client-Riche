@@ -3,6 +3,7 @@ console.log("JavaScript is linked"); /**Cette méthode permet de vérifier que J
 function init() {
     sayHello();
     document.body.addEventListener("click", selection); //vérification que le listener est ok
+    ajoutDiv();
 }
 
 function sayHello() { /**Cette méthode permet de vérifier que la console de log est activée. **/
@@ -18,4 +19,15 @@ function selection(event) {
     var element = event.target;
     element.classList.toggle("red");
 
+}
+
+function ajoutDiv() {
+    var div = document.createElement("div");
+    div.setAttribute("id", "divAinserer");
+    document.body.insertBefore(div, document.body.firstChild);
+    document.getElementById("divAinserer").innerHTML = "" +
+        "<input type=\"button\" value=\"DIV\" onclick=\"insertB('div')\"/>" +
+        "<input type=\"button\" value=\"P\" onclick=\"insertB('p')\"/>" +
+        "<input type=\"button\" value=\"H2\" onclick=\"insertB('h2')\"/>" +
+        "<input type=\"text\" id=\"toInsert\"/>";
 }
