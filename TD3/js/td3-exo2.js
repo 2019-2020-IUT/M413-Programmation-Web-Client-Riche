@@ -1,5 +1,5 @@
-/*<![CDATA[*/
+console.log("js linkef");
 
-function init(){
+function init() {
+    console.log("init ok");
 }
-/*]]>*/

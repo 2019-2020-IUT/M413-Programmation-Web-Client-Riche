@@ -17,11 +17,12 @@ function selection(event) {
     var vide = document.body.querySelector(".case.vide");
 
     if ((maCase.offsetTop == vide.offsetTop && Math.abs(maCase.offsetLeft - vide.offsetLeft == 102)) ||
-        (maCase.offsetLeft == vide.offsetLeft && Math.abs(maCase.offsetTop - vide.offsetTop == 102)) {
-            maCase.setAttribute("class", ".case.vide");
-            vide.setAttribute("class", ".case");
-        }
-
-        console.log(event.currentTarget.innerText);
-        var e = event.target;
+        (maCase.offsetLeft == vide.offsetLeft && Math.abs(maCase.offsetTop - vide.offsetTop == 102))) {
+        console.log("1");
+        maCase.className = "case vide";
+        vide.className = "case";
     }
+
+    console.log(event.currentTarget.className + " : " + event.currentTarget.innerText);
+    var e = event.target;
+}
