@@ -2,5 +2,4 @@
 
 ## Exercice 1
 
-> Que pouvez-vous dire de l’architecture de l’application ?
-
+Alors j'ai utilisé un buffer pour stocker le innerHTML afin de terminer toutes les instructions concernant un objet/une variable avant de passer à/au suivant.e.
