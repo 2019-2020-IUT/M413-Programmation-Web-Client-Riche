@@ -1,0 +1,34 @@
+<?php $url = $_POST["rssURL"]; if ($url != ""){ $monRSSDoc = new DOMDocument(); if ($monRSSDoc->load($url)){ header('Content-Type: text/xml'); echo $monRSSDoc->saveXML(); }else{ echo "erreur de lecture"; } }else{ echo "URL vide"; } ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>M4103 - Programmation Web Client Riche</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
+    <h1>M4103 - Programmation Web Client Riche</h1>
+</head>
+
+<body>
+    <h2>Un nouveau TD</h2>
+    <form>
+        <div id="inputs">
+            <input type="radio" onchange="selectionRSS(this.value)" id="url" name="url" value="http://www.societe-informatique-de-france.fr/feed/" /><label for="sif">La sif</label><br />
+            <input type="radio" onchange="selectionRSS(this.value)" id="url" name="url" value="http://filuns.unice.fr/accueil/@@rss_view" /><label for="unice">Unniversité de Nice</label><br />
+            <input type="radio" onchange="selectionRSS(this.value)" id="url" name="url" value="http://filuns.unice.fr/accueil/@@rss_view" /><label for="sophia">Sophia Antipolis</label><br />
+            <input type="radio" onchange="selectionRSS(this.value)" id="url" name="url" value="http://pro.clubic.com/actualites.rss" /><label for="clubic">Clubic</label><br />
+            <input type="radio" onchange="selectionRSS(this.value)" id="url" name="url" value="https://leponeyblanc.fr/api/rss/feed/" /><label for="clubic">Le Poney Blanc</label><br />
+            <input type="radio" onchange="selectionRSS(this.value)" id="url" name="url" value="https://www.otk-expert.fr/wp-content/plugins/forum-server/feed.php?topic=all" /><label for="clubic">OTK Expert</label><br />
+            <input type="radio" onchange="selectionRSS(this.value)" id="url" name="url" value="http://localhost/M4103-Programmation-Web-Client-Riche/jj64.txt" /><label for="sif">JJ64</label><br />
+        </div>
+    </form>
+</body>
+<p>Reçu :</p><br />
+<div id="retour"></div>
+
+<script src="./js/main.js"></script>
+
+</html>
